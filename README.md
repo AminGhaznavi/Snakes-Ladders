@@ -12,8 +12,9 @@ The game runs on a 10×10 board and includes the following features:
 Compile and run the code with:
 
 ```bash
-gcc main.c -o snake_ladder
+gcc Snakes-Laddersmain.c -o snake_ladder
 ./snake_ladder
+```
 🗂️ Project Structure
 main.c → Main game logic
 
