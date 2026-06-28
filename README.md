@@ -45,29 +45,50 @@ Open your terminal or command prompt, navigate to the project directory, and com
 gcc main.c -o snakes_and_ladders
 ```
 
-🕹️ How To Play
-1. Launch: Choose whether to Load a Saved Game or start a New Game.
+---
 
-2. Setup: Choose your mode (PvP or vs Computer) and enter player names.
+## 🕹️ Game Rules & How To Play
 
-3. Turns: On each turn, a dice is automatically rolled. You can then access the Shop to alter your fate if you have enough coins.
+Follow these simple steps to get your game running and understand the core mechanics:
 
-4. PVP Mechanic: Landing on the exact same tile as your opponent will kick them back to square 1 (unless they have a shield to absorb the impact!).
+* **1. Launching the Game**
+  Choose whether to **Load a Saved Game** (resuming your previous session) or start a fresh **New Game** from scratch.
 
-5. Winning: The first player to reach exactly tile 100 wins the game.
+* **2. Setup & Configuration**
+  Select your preferred mode—either **Player vs Player (PvP)** or **vs Computer (AI)**—and enter custom names for the players.
 
-🛠️ Code Structure Overview
-struct player: Manages player states including positions, shield status, coin balance, and turn skips.
+* **3. Turn-Based Gameplay**
+  On every single turn, the dice rolls automatically. If you have collected enough coins, the game will present the **Shop Menu** where you can strategically alter your fate before moving.
 
-struct map: Defines the 100-tile grid properties and contents.
+> ⚔️ **The Ultimate PvP Mechanic:** If you land on the **exact same tile** as your opponent, you will aggressively kick them back to **Square 1**! However, if they bought a **Shield** from the shop, it will absorb the impact, break the shield, and save their position.
 
-move_player(): Handles game logic, tile landing actions, and collision detection between players.
+* **4. Winning Condition**
+  The first player to navigate through the chaos and land exactly on **Tile 100** wins the match!
 
-shop(): Implements the interactive marketplace menu.
+---
 
-save_game() / load_game(): Handles binary file handling for game state persistence.
+## 🛠️ Code Architecture Overview
 
-🤝 Contributing
-Contributions, bugs, and feature requests are welcome! Feel free to check the issues page or submit a pull request if you want to enhance the terminal graphics or add more wacky board events.
+Here is a quick look under the hood at how the core game logic is structured in C:
 
-Enjoy the game, and may the RNG gods be in your favor! 🎲
+### Data Structures
+* `struct player` — Manages the state of each player, tracking their current position, shield status, wallet balance (coins), and turn skips.
+* `struct map` — Defines the properties, contents, and event triggers for each individual square on the 100-tile grid.
+
+### Core Functions
+* `move_player()` — The heart of the game logic. It calculates new positions, processes dynamic tile landings (Snakes, Trampolines, Coins), and handles player collision checking.
+* `shop()` — Powers the interactive CLI marketplace menu, handling item selection and real-time wallet deductions.
+* `save_game()` / `load_game()` — Manages data persistence by reading and writing raw struct data directly to a binary file (`save.dat`).
+
+---
+
+## 🤝 Contributing & Support
+
+Have an idea to make this game even wilder? Contributions are highly appreciated! 
+
+* 🐛 Found a bug? Open an **Issue**.
+* 💡 Want to add new custom events, board layouts, or fancy ASCII graphics? Fork the repo and submit a **Pull Request**.
+
+---
+
+### *May the RNG gods be forever in your favor!* 🎲
