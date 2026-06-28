@@ -41,8 +41,9 @@ You need a C compiler installed on your system (such as `gcc`).
 
 ### Compilation
 Open your terminal or command prompt, navigate to the project directory, and compile the source code:
-
-
+```bash
+gcc main.c -o snakes_and_ladders
+```
 
 🕹️ How To Play
 1. Launch: Choose whether to Load a Saved Game or start a New Game.
