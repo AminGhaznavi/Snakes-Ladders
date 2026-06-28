@@ -1,4 +1,4 @@
-# 🎲 Advanced Snakes and Ladders (CLI Edition)
+# 🎲 Advanced Snakes and Ladders 
 
 Welcome to **Advanced Snakes & Ladders**, a terminal-based reimagining of the classic board game written in pure C. This isn't just your ordinary luck-based game—it introduces an **In-game Economy, Power-ups, Shields, Mystery Events, and an AI Opponent** to add strategy and depth to every single move!
 
@@ -39,11 +39,6 @@ When it's your turn, your hard-earned coins can be spent on game-changing modifi
 ### Prerequisites
 You need a C compiler installed on your system (such as `gcc`).
 
-### Compilation
-Open your terminal or command prompt, navigate to the project directory, and compile the source code:
-```bash
-gcc main.c -o snakes_and_ladders
-```
 
 ---
 
